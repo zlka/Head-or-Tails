@@ -1,0 +1,23 @@
+import random
+
+def flip_coin():
+    random_number = random.randint(1,2)
+    if random_number == 1:
+        side = "head"
+    else:
+        side = "tails"
+    return side
+
+choice = input("head or tails: ")
+result = flip_coin()
+
+
+if choice == "head" or choice == "tails":
+    print("The coin landed on {}".format(result))
+    if result == choice:
+        print("You won!")
+    else:
+        print("You lost.")
+else:
+    input("Please enter either head or tails: ")
+    flip_coin()
